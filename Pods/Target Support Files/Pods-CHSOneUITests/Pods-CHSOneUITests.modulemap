@@ -1,0 +1,6 @@
+framework module Pods_CHSOneUITests {
+  umbrella header "Pods-CHSOneUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
