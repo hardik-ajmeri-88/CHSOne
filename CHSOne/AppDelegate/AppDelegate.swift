@@ -7,15 +7,16 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.keyboardManager()
         return true
     }
 
@@ -41,6 +42,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func keyboardManager() {
+        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().keyboardAppearance = .dark
+        IQKeyboardManager.sharedManager().overrideKeyboardAppearance = true
+        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
+        IQKeyboardManager.sharedManager().shouldShowToolbarPlaceholder = true
+        IQKeyboardManager.sharedManager().toolbarBarTintColor = UIColor.white
+        IQKeyboardManager.sharedManager().keyboardDistanceFromTextField = 20
+    }
 }
 

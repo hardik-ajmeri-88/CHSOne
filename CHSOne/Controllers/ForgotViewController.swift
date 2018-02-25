@@ -1,28 +1,28 @@
 //
-//  ViewController.swift
+//  ForgotViewController.swift
 //  CHSOne
 //
-//  Created by Hardik Ajmeri on 22/02/18.
+//  Created by Hardik Ajmeri on 25/02/18.
 //  Copyright © 2018 FutureScape. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
-
+class ForgotViewController: UIViewController {
+    
     //MARK: IBOutlets
-    @IBOutlet weak var txtComplex: UITextField!
-    @IBOutlet weak var btnContinue: UIButton!
+    @IBOutlet weak var btnSubmit: UIButton!
     @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var txtUsername: UITextField!
     
     //MARK: UIView Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view.
     }
     
     override func viewDidLayoutSubviews() {
-        txtComplex.addBorders(edges: [.bottom], color: UIColor.white)
+        txtUsername.addBorders(edges: [.bottom], color: UIColor.white)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -35,32 +35,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewWillTransition(to: size, with: coordinator)
     }
     
-    //MARK: Private Methods
-    func commonInit() -> Void {
-        //self.txtComplex.bottomBorder(width: 1.0, borderColor: UIColor.lightGray)
-    }
-
-    //MARK: IBAction Methods
-    @IBAction func continueTouchupInside(_ sender: Any) {
-        
-    }
-    
-    @IBAction func backTouchupInside(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     //MARK: UITextField Delegates
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
+    //MARK: - IBAction Methods
+    @IBAction func backTouchupInside(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func submitTouchupInside(_ sender: Any) {
+        
+    }
+
     //MARK: Memory Warning Method
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-
