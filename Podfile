@@ -7,7 +7,8 @@ target 'CHSOne' do
   pod 'Alamofire', '~> 4.6'
   pod 'IQKeyboardManagerSwift'
   pod 'MBProgressHUD', '~> 1.1.0'
-
+  pod 'SideMenu'
+  
   # Pods for CHSOne
 
   target 'CHSOneTests' do

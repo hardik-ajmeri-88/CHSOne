@@ -6,8 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GillSans.ttc">
+            <string>GillSans-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -20,7 +26,62 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fob-Cx-WBR">
+                                <rect key="frame" x="67" y="293" width="240" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHS ONE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSH-7B-oXJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cSH-7B-oXJ" secondAttribute="height" multiplier="6:1" id="Qof-4c-0r7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="44"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOb-fC-7z4">
+                                        <rect key="frame" x="0.0" y="40" width="240" height="8"/>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.52156862749999999" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="8" id="cQb-d9-bek"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digital Community" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNU-Ig-GYQ">
+                                        <rect key="frame" x="0.0" y="48" width="240" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="2xI-wb-d5s"/>
+                                            <constraint firstAttribute="width" secondItem="xNU-Ig-GYQ" secondAttribute="height" multiplier="15:2" id="Xmj-Nq-d8B"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="21"/>
+                                        <color key="textColor" red="0.98039215690000003" green="0.52156862749999999" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HOb-fC-7z4" secondAttribute="trailing" id="3r6-O5-G8a"/>
+                                    <constraint firstItem="cSH-7B-oXJ" firstAttribute="leading" secondItem="fob-Cx-WBR" secondAttribute="leading" id="7i9-Fr-TP4"/>
+                                    <constraint firstAttribute="bottom" secondItem="xNU-Ig-GYQ" secondAttribute="bottom" id="NcM-2W-0nr"/>
+                                    <constraint firstAttribute="trailing" secondItem="xNU-Ig-GYQ" secondAttribute="trailing" id="Nf2-EU-mTp"/>
+                                    <constraint firstItem="xNU-Ig-GYQ" firstAttribute="leading" secondItem="fob-Cx-WBR" secondAttribute="leading" id="Pr0-G8-oQB"/>
+                                    <constraint firstAttribute="trailing" secondItem="cSH-7B-oXJ" secondAttribute="trailing" id="R5D-o6-eGT"/>
+                                    <constraint firstAttribute="width" secondItem="fob-Cx-WBR" secondAttribute="height" multiplier="3:1" id="bNZ-UL-gYT"/>
+                                    <constraint firstItem="HOb-fC-7z4" firstAttribute="top" secondItem="cSH-7B-oXJ" secondAttribute="bottom" id="e8A-0x-rA0"/>
+                                    <constraint firstItem="cSH-7B-oXJ" firstAttribute="top" secondItem="fob-Cx-WBR" secondAttribute="top" id="ik6-Ie-4fC"/>
+                                    <constraint firstItem="HOb-fC-7z4" firstAttribute="leading" secondItem="fob-Cx-WBR" secondAttribute="leading" id="j5r-ar-oJ9"/>
+                                    <constraint firstAttribute="height" constant="80" id="myX-zW-qpj"/>
+                                    <constraint firstItem="xNU-Ig-GYQ" firstAttribute="top" secondItem="HOb-fC-7z4" secondAttribute="bottom" id="y0M-BN-gWu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10196078431372549" green="0.20784313725490194" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fob-Cx-WBR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="JHL-rE-153"/>
+                            <constraint firstItem="fob-Cx-WBR" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Zo0-dR-qTB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>

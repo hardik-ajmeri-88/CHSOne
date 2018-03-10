@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 import IQKeyboardManagerSwift
 
 @UIApplicationMain
@@ -17,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         self.keyboardManager()
+        self.sideMenuManager()
+        if #available(iOS 11, *) {
+            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.clear], for: .normal)
+            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.clear], for: .highlighted)
+        } else {
+            UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), for:UIBarMetrics.default)
+        }
         return true
     }
 
@@ -50,6 +58,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().shouldShowToolbarPlaceholder = true
         IQKeyboardManager.sharedManager().toolbarBarTintColor = UIColor.white
         IQKeyboardManager.sharedManager().keyboardDistanceFromTextField = 20
+    }
+    
+    func sideMenuManager() {
+        SideMenuManager.default.menuWidth = Device.TheCurrentDeviceWidth - 80
+        SideMenuManager.default.menuAllowPushOfSameClassTwice = false
+        SideMenuManager.default.menuFadeStatusBar = false
+        SideMenuManager.default.menuEnableSwipeGestures = true
+        SideMenuManager.default.menuShadowRadius = 10
+        SideMenuManager.default.menuShadowColor = UIColor.darkGray
+        SideMenuManager.default.menuShadowOpacity = 0.5
     }
 }
 

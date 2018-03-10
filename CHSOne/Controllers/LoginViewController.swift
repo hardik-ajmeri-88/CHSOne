@@ -18,6 +18,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.commonInit()
     }
     
     override func viewDidLayoutSubviews() {
@@ -35,6 +36,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewWillTransition(to: size, with: coordinator)
     }
     
+    //MARK: - Private Methods
+    func commonInit() {
+        txtUsername.addPaddingLeftIcon(UIImage(named: "user")!, padding: 8.0)
+        txtPassword.addPaddingLeftIcon(UIImage(named: "lock")!, padding: 8.0)
+    }
 
     //MARK: UITextField Delegates
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.commonInit()
     }
     
     override func viewDidLayoutSubviews() {
@@ -37,7 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Private Methods
     func commonInit() -> Void {
-        //self.txtComplex.bottomBorder(width: 1.0, borderColor: UIColor.lightGray)
+        txtComplex.addPaddingLeftIcon(UIImage(named: "building")!, padding: 8.0)
     }
 
     //MARK: IBAction Methods

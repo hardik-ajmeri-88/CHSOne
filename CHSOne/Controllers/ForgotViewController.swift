@@ -19,6 +19,7 @@ class ForgotViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        txtUsername.addPaddingLeftIcon(UIImage(named: "user")!, padding: 8.0)
     }
     
     override func viewDidLayoutSubviews() {

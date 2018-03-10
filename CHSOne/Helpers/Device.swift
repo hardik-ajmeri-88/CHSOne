@@ -33,6 +33,13 @@ struct Device {
         return Singleton.height
     }
     
+    static var TheCurrentDeviceWidth: CGFloat {
+        struct Singleton {
+            static let width = UIScreen.main.bounds.size.width
+        }
+        return Singleton.width
+    }
+    
     // MARK: - Device Idiom Checks
     static var PHONE_OR_PAD: String {
         if isPhone() {

@@ -17,6 +17,57 @@ extension UITextField: UITextFieldDelegate {
             self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSAttributedStringKey.foregroundColor: newValue!])
         }
     }
+    
+    @IBInspectable public var leftViewTintColor: UIColor? {
+        get {
+            guard let iconView = leftView as? UIImageView else { return nil }
+            return iconView.tintColor
+        }
+        set {
+            guard let iconView = leftView as? UIImageView else { return }
+            iconView.image = iconView.image?.withRenderingMode(.alwaysTemplate)
+            iconView.tintColor = newValue
+        }
+    }
+    
+    @IBInspectable public var rightViewTintColor: UIColor? {
+        get {
+            guard let iconView = rightView as? UIImageView else { return nil }
+            return iconView.tintColor
+        }
+        set {
+            guard let iconView = rightView as? UIImageView else { return }
+            iconView.image = iconView.image?.withRenderingMode(.alwaysTemplate)
+            iconView.tintColor = newValue
+        }
+    }
+    
+    public func clear() {
+        text = ""
+        attributedText = NSAttributedString(string: "")
+    }
+    
+    public func addPaddingLeft(_ padding: CGFloat) {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: padding, height: frame.height))
+        leftView = paddingView
+        leftViewMode = .always
+    }
+    
+    public func addPaddingLeftIcon(_ image: UIImage, padding: CGFloat) {
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        self.leftView = imageView
+        self.leftView?.frame.size = CGSize(width: image.size.width + padding, height: image.size.height)
+        self.leftViewMode = UITextFieldViewMode.always
+    }
+    
+    public var isEmpty: Bool {
+        return text?.isEmpty == true
+    }
+    
+    public var trimmedText: String? {
+        return text?.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
 }
 
 extension UITextView: UITextViewDelegate {

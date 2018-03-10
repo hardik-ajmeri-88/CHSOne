@@ -25,6 +25,11 @@
 		1ABD4ED1203F18320060CEC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABD4ECF203F18320060CEC3 /* LaunchScreen.storyboard */; };
 		1ABD4EDC203F18320060CEC3 /* CHSOneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD4EDB203F18320060CEC3 /* CHSOneTests.swift */; };
 		1ABD4EE7203F18320060CEC3 /* CHSOneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD4EE6203F18320060CEC3 /* CHSOneUITests.swift */; };
+		1ADF8EBE204A978E00FBD4CF /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADF8EBD204A978E00FBD4CF /* DashboardViewController.swift */; };
+		1AE6A1FE2049B70D00A076FE /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6A1FD2049B70D00A076FE /* AppConstant.swift */; };
+		1AE6A1FF2049BAEB00A076FE /* SideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE6A2002049BAEB00A076FE /* SideMenu.framework */; };
+		1AE6A2022049BE3E00A076FE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6A2012049BE3E00A076FE /* MenuViewController.swift */; };
+		1AE6A2042049E4A300A076FE /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6A2032049E4A300A076FE /* NotificationViewController.swift */; };
 		462EA2DD9303CCD0B072AC61 /* Pods_CHSOneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCA0B535D1AE0CCEE6A71F7 /* Pods_CHSOneUITests.framework */; };
 		4F497ED17C67060A95C493BE /* Pods_CHSOneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68BA227B07BBE9EE97E4C71A /* Pods_CHSOneTests.framework */; };
 		596A92DE7469FAB6BF233088 /* Pods_CHSOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6357E93A2A9EAB70CC745DB9 /* Pods_CHSOne.framework */; };
@@ -72,6 +77,11 @@
 		1ABD4EE2203F18320060CEC3 /* CHSOneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CHSOneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABD4EE6203F18320060CEC3 /* CHSOneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHSOneUITests.swift; sourceTree = "<group>"; };
 		1ABD4EE8203F18320060CEC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ADF8EBD204A978E00FBD4CF /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		1AE6A1FD2049B70D00A076FE /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		1AE6A2002049BAEB00A076FE /* SideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AE6A2012049BE3E00A076FE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		1AE6A2032049E4A300A076FE /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		1CCA0B535D1AE0CCEE6A71F7 /* Pods_CHSOneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CHSOneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2444572BF8065DB054711F19 /* Pods-CHSOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CHSOne.release.xcconfig"; path = "Pods/Target Support Files/Pods-CHSOne/Pods-CHSOne.release.xcconfig"; sourceTree = "<group>"; };
 		2DC6C5814CDF41A63C8D0DB3 /* Pods-CHSOneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CHSOneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CHSOneTests/Pods-CHSOneTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE6A1FF2049BAEB00A076FE /* SideMenu.framework in Frameworks */,
 				1A49C343203F20B900032D65 /* Alamofire.framework in Frameworks */,
 				1A49C344203F20B900032D65 /* IQKeyboardManagerSwift.framework in Frameworks */,
 				1A49C345203F20B900032D65 /* MBProgressHUD.framework in Frameworks */,
@@ -194,6 +205,9 @@
 				1ABD4EC8203F18320060CEC3 /* ViewController.swift */,
 				1A512AF52042C56D00A5B0EE /* LoginViewController.swift */,
 				1A512AFB2042DD7800A5B0EE /* ForgotViewController.swift */,
+				1AE6A2012049BE3E00A076FE /* MenuViewController.swift */,
+				1AE6A2032049E4A300A076FE /* NotificationViewController.swift */,
+				1ADF8EBD204A978E00FBD4CF /* DashboardViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -210,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				1A66603E2040775C0040F9DC /* Device.swift */,
+				1AE6A1FD2049B70D00A076FE /* AppConstant.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -234,6 +249,7 @@
 		40799BCAF4EE6299D26E81BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1AE6A2002049BAEB00A076FE /* SideMenu.framework */,
 				1A49C346203F20B900032D65 /* Alamofire.framework */,
 				1A49C347203F20B900032D65 /* IQKeyboardManagerSwift.framework */,
 				1A49C348203F20B900032D65 /* MBProgressHUD.framework */,
@@ -407,12 +423,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -556,9 +574,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A512AF62042C56D00A5B0EE /* LoginViewController.swift in Sources */,
+				1AE6A1FE2049B70D00A076FE /* AppConstant.swift in Sources */,
+				1AE6A2042049E4A300A076FE /* NotificationViewController.swift in Sources */,
 				1A66603B20406A050040F9DC /* APIManager.swift in Sources */,
 				1A512AFC2042DD7800A5B0EE /* ForgotViewController.swift in Sources */,
+				1AE6A2022049BE3E00A076FE /* MenuViewController.swift in Sources */,
 				1A512AF420429FB200A5B0EE /* vcViewModel.swift in Sources */,
+				1ADF8EBE204A978E00FBD4CF /* DashboardViewController.swift in Sources */,
 				1A49C34A203F2A7300032D65 /* UIViewExtension.swift in Sources */,
 				1ABD4EC9203F18320060CEC3 /* ViewController.swift in Sources */,
 				1A512AFA2042D37900A5B0EE /* TextInputExtension.swift in Sources */,
@@ -726,7 +748,7 @@
 				INFOPLIST_FILE = CHSOne/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hardikajmeri.CHSOne;
+				PRODUCT_BUNDLE_IDENTIFIER = com.futurescape.CHSOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -742,7 +764,7 @@
 				INFOPLIST_FILE = CHSOne/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hardikajmeri.CHSOne;
+				PRODUCT_BUNDLE_IDENTIFIER = com.futurescape.CHSOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
